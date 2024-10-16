@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>will you be my pookie?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+        font-family: 'Lobster', cursive; 
+        font-size: 100px;
+        color: #8ED72A;
+        font-size: calc(10px + 6vw); 
+        }
+
+        body {
+            display: flex;
+            background-color: beige; 
+            align-items:center; 
+            justify-content: center;
+            flex-direction:column;
+            height: 100vh;
+            margin:40px;
+            border: 8px solid #b96883;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow:0 0 20px rgba(172, 95, 65, 0.6); 
+            
+        }
+        .general {
+            font-size: calc(12px + 2vw);
+            background-color: bisque; 
+            color:brown;
+            padding: 20px 50px;
+            border-radius: 12px;
+            border: 1px solid brown;
+            cursor: grab;
+            margin:10px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .general:hover {
+         transform: scale(1.05); /* Slight zoom effect on hover */
+         box-shadow: 0 0 15px rgba(255, 182, 193, 0.8);
+        }
+        @keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    background-color: pink;
+    transfrom: rotate(-45deg);
+    animation: float 2s ease-out forwards;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+
+.heart:after {
+    left: 25px;
+    top: 0;
+}
+
+.emoji {
+    font-size: 50px;
+    position: absolute;
+    animation: float 2s ease-out forwards;
+}
+
+    </style>
+    
+    <script type="text/javascript">
+        function yes(){
+            
+            for (let i = 0; i < 5; i++) {
+    setTimeout(() => {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw'; 
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 2000);
+    }, i * 300); 
+}
+
+            const yes = new Audio("audio/foundyou.mp3"); 
+            yes.currentTime=0.44;
+            yes.play();
+
+        const gif=document.createElement('img');
+        gif.src="audio/cute.gif";
+        gif.alt="love you too"
+        gif.style.width='300px';
+        gif.style.marginTop="20px"
+        const b1= document.getElementById('n1');
+            b1.remove();
+            const b2 = document.getElementById('b1');
+            if (b2) { 
+            b2.remove();
+        }
+
+
+        document.body.appendChild(gif);
+        }
+
+        function no1(){
+            const lovebomber = new Audio("audio/lovebomber.mp3"); 
+            lovebomber.currentTime=2;
+            lovebomber.play();
+
+            setTimeout(function() {
+                lovebomber.pause();
+                lovebomber.currentTime = 0; 
+            }, (12 - 2 )*1000);
+            const on1= document.getElementById('n1');
+            on1.remove();
+
+           const n2=document.createElement("input");
+           n2.type="button";
+           n2.id="n2"
+           n2.value="EXCUSE ME?";
+           n2.className="general";
+           n2.onclick= function() {
+            const on2=document.getElementById('n2');
+            if(on2)
+            on2.remove();
+
+            const n3=document.createElement("input");
+           n3.type="button";
+           n3.value="Are You rejecting me?";
+           n3.className="general";
+           n3.id="n3";
+           n3.onclick= function() {
+            const on3=document.getElementById("n3");
+            on3.remove();
+
+            const n4=document.createElement("input");
+           n4.type="button";
+           n4.id="n4"
+           n4.value="Rectify your error. Now.";
+           n4.className="general";
+           n4.onclick= function() {
+            const on4=document.getElementById("n4");
+            on4.remove();
+
+            const n5=document.createElement("input");
+           n5.type="button";
+           n5.id="n5"
+           n5.value="You are doing this to me?";
+           n5.className="general";
+           n5.onclick= function() {
+            console.log("Button 5 clicked");
+            const on5=document.getElementById("n5");
+            on5.remove();
+
+
+            const n6=document.createElement("input");
+           n6.type="button";
+           n6.id="n6"
+           n6.value="pOOKIE? OUCH ";
+           n6.className="general";
+           n6.onclick= function() {
+            const on6=document.getElementById("n6");
+            on6.remove();
+
+            const n7=document.createElement("input");
+           n7.type="button";
+           n7.id="n7"
+           n7.value="hawwwww ";
+           n7.className="general";
+           n7.onclick= function() {
+            //alert('audio start');
+            const baby = new Audio("audio/baby.mp3"); 
+            baby.currentTime=40;
+            baby.play();
+            setTimeout(function() {
+                baby.pause();
+                baby.currentTime = 0; 
+            }, (52 - 40 )*1000);
+        
+            const on7=document.getElementById('n7');
+            if(on7)
+            on7.remove();
+
+            const n8=document.createElement("input");
+           n8.type="button";
+           n8.value="Big Boss mujhe hurt hua big boss";
+           n8.className="general";
+           n8.id="n8";
+           n8.onclick= function() {
+            const on8=document.getElementById("n8");
+            on8.remove();
+
+            const n9=document.createElement("input");
+           n9.type="button";
+           n9.id="n9"
+           n9.value="TU NAHI CHAHIYE";
+           n9.className="general";
+           n9.onclick= function() {
+            const on9=document.getElementById("n9");
+            on9.remove();
+
+            const n10=document.createElement("input");
+           n10.type="button";
+           n10.id="n10"
+           n10.value="Lifetime regret hoga";
+           n10.className="general";
+           n10.onclick= function() {
+            const on10=document.getElementById("n10");
+            on10.remove();
+
+            const n11=document.createElement("input");
+           n11.type="button";
+           n11.id="n11"
+           n11.value="really wanna miss this GOLDEN opportunity? ";
+           n11.className="general";
+           n11.onclick= function() {
+            const on11=document.getElementById("n11");
+            on11.remove();
+
+            const n12=document.createElement("input");
+           n12.type="button";
+           n12.id="n12"
+           n12.value="YEH BHI KOI SAWAL HAI? ofc YES!!";
+           n12.className="general";
+           n12.onclick= yes;
+           
+           document.body.appendChild(n12);
+        }
+           
+           document.body.appendChild(n11);
+        }
+           
+           document.body.appendChild(n10);
+        }
+           
+           document.body.appendChild(n9);
+        }
+           document.body.appendChild(n8);
+          
+        }                          
+           
+           document.body.appendChild(n7);
+        }
+           
+           document.body.appendChild(n6);
+        }
+           
+           document.body.appendChild(n5);
+        }
+           
+           document.body.appendChild(n4);
+        }
+           document.body.appendChild(n3);
+           }
+           
+           document.body.appendChild(n2);
+        }                          
+    </script>
+</head>
+<body> 
+    <h1 style="margin-bottom:20px; color:rgb(142, 221, 39) ; font-size:100px; font-family: 'Impact, Haettenschweiler'; font-style: oblique; text-decoration:wavy;text-align: center; ">Will YOU be my Valentine?</h1>
+    <div><input type="button"
+    id="b1"
+    value="Yes"
+    class="general"
+    onClick="yes()"> 
+    <input type="button"
+    id="n1"
+    value="No"
+    class="general"
+    onClick="no1()"> 
+</div>
+</body>
+</html>
